@@ -90,7 +90,7 @@ function Sass(workerUrl) {
   }
 
   this._callbacks = {};
-  this._worker = new Worker(workerUrl || globalWorkerUrl);
+  this._worker = new Worker('./worker.js');
   this._worker.addEventListener('message', this._handleWorkerMessage, false);
 }
 
